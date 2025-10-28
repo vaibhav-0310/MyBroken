@@ -3,7 +3,7 @@ import axios from "axios";
 import "dotenv/config";
 
 const router = express.Router();
-const openrouterApiKey = "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";
+const openrouterApiKey = process.env.OPENROUTER_API_KEY;
 const openrouterUrl = "https://openrouter.ai/api/v1/chat/completions";
 
 router.post("/ask", async (req, res) => {
